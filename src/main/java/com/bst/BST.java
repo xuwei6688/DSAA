@@ -95,7 +95,7 @@ public class BST<E extends Comparable<E>> {
             return node;
         }
 
-        // 如果e 小于当前节点的元素e，那么就像向子树插入元素
+        // 如果e 小于当前节点的元素e，那么就向左子树插入元素
         // 如果e 大于当前节点的元素e，那么就向右子树插入元素
         // 为什么需要返回引用呢？返回引用是为了可以把新建的节点关联到原来的树上
         if (e.compareTo(node.e) < 0) {

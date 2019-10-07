@@ -18,19 +18,13 @@ package com.bst;
  **/
 public class Test {
     public static void main(String[] args) {
-        int[] nums = {5, 3, 6, 2, 4, 8, 9, 13,7};
-        BST<Integer> bst = new BST<>();
-        for (int i = 0; i < nums.length; i++) {
-            bst.add(nums[i]);
-        }
-
-//        bst.postOrder();
-//        System.out.println(bst.contains(9));
-//        bst.levelOrder();
-
-        bst.preOrder();
-        bst.remove(8);
-        System.out.println("-------");
-        bst.preOrder();
+        int[] nums = {5, 3, 6, 2, 4, 8,7,10,9,13};
+//        Tree<Integer> bst = new Tree<>();
+//        for (int i = 0; i < nums.length; i++) {
+//            bst.add(nums[i]);
+//        }
+////        bst.preOrder();
+//        bst.remove(8);
+//        bst.inOrder();
     }
 }

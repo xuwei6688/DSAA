@@ -148,6 +148,15 @@ public class Array<E> {
         data = newData;
     }
 
+    public void swap(int m, int n) {
+        if (m < 0 || n < 0) {
+            throw new IllegalArgumentException("index must > 0");
+        }
+        E e = data[m];
+        data[m] = data[n];
+        data[n] = e;
+    }
+
     @Override
     public String toString() {
         return "Array{" +

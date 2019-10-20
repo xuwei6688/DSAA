@@ -11,7 +11,7 @@ import com.array.Array;
 public class MaxHeap<E extends Comparable<E>> {
     private Array<E> data;
 
-    MaxHeap() {
+    public MaxHeap() {
         data = new Array<>();
     }
 
@@ -99,7 +99,20 @@ public class MaxHeap<E extends Comparable<E>> {
         }
     }
 
+    public void replace(E e) {
+        data.addLast(e);
+        data.swap(0, data.getSize() - 1);
+        data.removeLast();
+        siftDown(0);
+    }
 
+    //把一个二叉树整理成堆
+    public void heapify(E[] data) {
+        this.data = new Array<>(data);
 
+        for (int i = parentIndex(getSize() - 1); i >= 0; i--) {
+            siftDown(i);
+        }
+    }
 
 }

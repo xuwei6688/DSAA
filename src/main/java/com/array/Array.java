@@ -14,6 +14,13 @@ public class Array<E> {
     public Array() {
         this.data = (E[]) new Object[10];
     }
+    public Array(E[] data) {
+        this.data = (E[]) new Object[data.length];
+        for (int i = 0; i < data.length; i++) {
+            this.data[i] = data[i];
+        }
+        size = data.length;
+    }
 
     public int getSize() {
         return size;

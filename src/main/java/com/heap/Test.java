@@ -11,10 +11,17 @@ public class Test {
     public static void main(String[] args) {
         int n = 1000000;
 
-        MaxHeap<Integer> maxHeap = new MaxHeap<>();
+//        MaxHeap<Integer> maxHeap = new MaxHeap<>();
+//        Random random = new Random();
+//        for(int i = 0 ; i < n ; i ++)
+//            maxHeap.add(random.nextInt(Integer.MAX_VALUE));
+        Integer [] data = new Integer[n];
         Random random = new Random();
-        for(int i = 0 ; i < n ; i ++)
-            maxHeap.add(random.nextInt(Integer.MAX_VALUE));
+        for (int i = 0; i < n; i++) {
+            data[i] = random.nextInt(Integer.MAX_VALUE);
+        }
+        MaxHeap<Integer> maxHeap = new MaxHeap<>();
+        maxHeap.heapify(data);
 
         int[] arr = new int[n];
         for(int i = 0 ; i < n ; i ++)
